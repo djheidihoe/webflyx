@@ -6,6 +6,7 @@
 * The Big Short
 * 12 Monkeys
 * The Curious Case of Benjamin Button
+<<<<<<< Updated upstream
 
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': false}} }%%
@@ -53,3 +54,7 @@
         merge release
 
 ```
+||||||| Stash base
+=======
+* one more
+>>>>>>> Stashed changes

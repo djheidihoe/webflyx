@@ -4,8 +4,8 @@ from typing import Dict, Union
 class HTMLNode:
     def __init__(
         self,
-        tag: str | None = None,
-        value: str | None = None,
+        tag: Union[str, None] = None,
+        value: Union[str, None] = None,
         children: Union["HTMLNode", None] = None,
         props: Union[Dict[str, str], None] = None,
     ) -> None:
@@ -17,7 +17,7 @@ class HTMLNode:
     def to_html(self) -> None:
         raise NotImplementedError("to_html method not implemented")
 
-    def props_to_html(self) -> str:
+    def aprops_to_html(self) -> str:
         if self.props is None:
             return ""
         props_html = ""
@@ -25,9 +25,5 @@ class HTMLNode:
             props_html += f' {prop}="{self.props[prop]}"'
         return props_html
 
-    # pyright: ignore[]
     def __repr__(self):
-        return self.tag, self.value, self.children, self.props
-
-    to_html(node).
-    to
+        return f"HTMLNode({self.tag}, {self.value}, children: {self.children}, {self.props})"

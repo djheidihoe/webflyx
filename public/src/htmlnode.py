@@ -28,3 +28,6 @@ class HTMLNode:
     # pyright: ignore[]
     def __repr__(self):
         return self.tag, self.value, self.children, self.props
+
+    to_html(node).
+    to
